@@ -4,60 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brevo Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="pageLayout">
+    <main class="pageLayout">
         <div class="pageContentWrapper">
-            <div class="brevo-logo__wrapper">
-                <img class="brevo-logo" src="asset/brevoLogo.png" />
-            </div>
-            <form class="login-form">
-                <div class="login-form__heading">Log In</div>
+            <header class="brevo-logo__wrapper">
+                <img class="brevo-logo" src="asset/brevoLogo.png" alt="Brevo Logo" />
+            </header>
+            
+            <section class="login-form">
+                <h3 class="login-form__heading" id="login-heading">Log In</h1>
                 <div class="login-form__content">
-                    <div class="login-form__fields">
+                    <section class="login-form__fields">
                         <div class="login-form__field">
-                            <div class="login-form__label">
+                            <label class="login-form__label" for="email">
                                 Email address:
-                                <span class="required">*</span>
-                            </div>
-                            <input class="login-form__input" type="text" id="email" name="email">
+                                <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input class="login-form__input" type="email" id="email" name="email" required>
                         </div>
                         <div class="login-form__field">
-                            <div class="login-form__label">
+                            <label class="login-form__label" for="password">
                                 Password:
-                                <span class="required">*</span>
-                            </div>
-                            <input class="login-form__input" type="password" id="password" name="password">
+                                <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input class="login-form__input" type="password" id="password" name="password" required>
                         </div>
                         <div class="login-form__field">
-                            <button class="login-button" type="submit">Log In</button>
+                            <button class="login-button">Log In</button>
                         </div>
-                    </div>
-                    <div class="login-form__divider">
+                    </fieldset>
+                    
+                    <div class="login-form__divider" role="separator" aria-label="or">
                         <div class="login-form__divider-line"></div>
                         <span class="login-form__divider-text">OR</span>
-                       <div class="login-form__divider-line"></div>
+                        <div class="login-form__divider-line"></div>
                     </div>
-                    <div class="login-form__socials">
-                        <button class="social-button">
-                            <img class="social-button__logo" src="asset/googleLogo.png" />
+                    
+                    <section class="login-form__socials" aria-label="Social login options">
+                        <button class="social-button" type="button">
+                            <img class="social-button__logo" src="asset/googleLogo.png" alt="Google" />
                             <span class="social-button__text">Sign in with Google</span>
                         </button>
-                        <button class="social-button">
-                            <img class="social-button__logo" src="asset/appleLogo.png" />
+                        <button class="social-button" type="button">
+                            <img class="social-button__logo" src="asset/appleLogo.png" alt="Apple" />
                             <span class="social-button__text">Sign in with Apple</span>
                         </button>
-                    </div>
+                    </section>
                 </div>
-            </form>
-             <footer>
-                <a>Create an account</a>
-                <a>I forgot my password</a>
+            </section>
+            
+            <footer>
+                <nav aria-label="Account options">
+                    <a>Create an account</a>
+                    <a>I forgot my password</a>
+                </nav>
             </footer>
         </div>
-    </div>    
-
+    </main>
+    
     <script src="index.js"></script>
 </body>
 </html>

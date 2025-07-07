@@ -1,7 +1,6 @@
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
 const loginButton = document.querySelector('.login-button');
-const loginForm = document.querySelector('.login-form');
 
 function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -37,8 +36,7 @@ function updateButtonState() {
     }
 }
 
-loginForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+loginButton.addEventListener('click', function(e) {
     let valid = true;
 
     const emailVal = emailInput.value.trim();
