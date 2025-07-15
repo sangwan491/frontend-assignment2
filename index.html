@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brevo Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="pageLayout">
+        <div class="pageContentWrapper">
+            <header class="brevo-logo__wrapper">
+                <img class="brevo-logo" src="asset/brevoLogo.png" alt="Brevo Logo" />
+            </header>
+            
+            <section class="login-form">
+                <h3 class="login-form__heading" id="login-heading">Log In</h1>
+                <div class="login-form__content">
+                    <section class="login-form__fields">
+                        <div class="login-form__field">
+                            <label class="login-form__label" for="email">
+                                Email address:
+                                <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input class="login-form__input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="login-form__field">
+                            <label class="login-form__label" for="password">
+                                Password:
+                                <span class="required" aria-label="required">*</span>
+                            </label>
+                            <input class="login-form__input" type="password" id="password" name="password" required>
+                        </div>
+                        <div class="login-form__field">
+                            <button class="login-button">Log In</button>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="login-form__divider" role="separator" aria-label="or">
+                        <div class="login-form__divider-line"></div>
+                        <span class="login-form__divider-text">OR</span>
+                        <div class="login-form__divider-line"></div>
+                    </div>
+                    
+                    <section class="login-form__socials" aria-label="Social login options">
+                        <button class="social-button" type="button">
+                            <img class="social-button__logo" src="asset/googleLogo.png" alt="Google" />
+                            <span class="social-button__text">Sign in with Google</span>
+                        </button>
+                        <button class="social-button" type="button">
+                            <img class="social-button__logo" src="asset/appleLogo.png" alt="Apple" />
+                            <span class="social-button__text">Sign in with Apple</span>
+                        </button>
+                    </section>
+                </div>
+            </section>
+            
+            <footer>
+                <nav aria-label="Account options">
+                    <a>Create an account</a>
+                    <a>I forgot my password</a>
+                </nav>
+            </footer>
+        </div>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>

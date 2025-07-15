@@ -1,0 +1,242 @@
+:root {
+    /* Typography */
+    --font-size-base: 1rem;
+    --font-size-heading1: 2rem;
+    --font-size-heading2: 1.5rem;
+    --font-size-heading3: 1.25rem;
+    --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --font-family-bold: 'Roboto-Bold', system-ui, -apple-system, sans-serif;
+    
+    --line-height-base: 1.5rem;
+
+    /* Colors - Base */
+    --color-gold: hsl(44, 34.8%, 72.4%);
+    --color-white: white;
+    --color-black: black;
+    --color-cream: #faf5e3;
+    --color-red: red;
+
+    /* Colors - Gray Scale */
+    --color-extra-light-grey: hsl(0, 0%, 98%);
+    --color-light-grey: hsl(0, 0%, 94.1%);
+    --color-mid-grey: hsl(0, 0%, 89%);
+    --color-grey: hsl(0, 0%, 81.2%);
+    
+    /* Colors - Content */
+    --color-content-primary: black;
+    --color-content-secondary: hsl(0, 0%, 41.2%);
+    --color-overlay: rgba(0, 0, 0, 0.3);
+    --color-accent-01: #efeefc;
+    
+    /* Border Radius */
+    --border-radius_sm: 0.5rem;
+    --border-radius_md: 1rem;
+    --border-radius_lg: 1.5rem;
+    --border-radius_xlg: 2rem;
+    
+    /* Shadows */
+    --shadow_light-xsmall: 0 1px 2px hsla(0, 0%, 11%, 0.08);
+    --shadow_light-small: 0 4px 8px -2px hsla(0, 0%, 11%, 0.14), 0 2px 4px -2px hsla(0, 0%, 11%, .1);
+    --shadow_light-medium: 0 10px 16px -4px hsla(0, 0%, 11%, 0.1), 0 4px 6px -2px hsla(0, 0%, 11%, .04);
+    --shadow_light-large: 0 20px 24px -4px hsla(0, 0%, 11%, 0.08), 0 8px 8px hsla(0, 0%, 11%, .03);
+    --shadow_light-drag: 0 20px 32px -4px hsla(0, 0%, 11%, 0.1), 0 12px 20px -2px hsla(0, 0%, 11%, .102), 0 4px 8px 0 hsla(0, 0%, 11%, .122);
+    --shadow_dark-xsmall: 0 1px 2px hsla(0, 0%, 0%, 0.16);
+    --shadow_dark-small: 0 4px 8px -2px hsla(0, 0%, 0%, 0.24), 0 2px 4px -2px hsla(0, 0%, 0%, .16);
+    --shadow_dark-medium: 0 10px 16px -4px hsla(0, 0%, 0%, 0.2), 0 4px 6px -2px hsla(0, 0%, 0%, .16);
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+}
+
+/* ===== RESET STYLES ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0;
+}
+
+h1 {
+    font-size: var(--font-size-heading1);
+}
+
+h2 {
+    font-size: var(--font-size-heading2);
+}
+
+h3 {
+    font-size: var(--font-size-heading3);
+}
+
+.required {
+    color: var(--color-red);
+}
+
+.pageLayout {
+    background-color: var(--color-cream);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageContentWrapper {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brevo-logo__wrapper {
+    margin-bottom: 1.5rem;
+    width: 11rem;
+}
+
+.brevo-logo {
+    height: 100%;
+    width: 100%;
+}
+
+.login-form {
+    width: 31.25rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-mid-grey);
+    border-radius: var(--border-radius_md);
+    padding: 1rem;
+}
+
+.login-form__content {
+    margin-top: 2rem;
+}
+
+.login-form__heading {
+    text-align: center;
+}
+
+.login-form__field:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.login-form__label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.login-form__input {
+    width: 100%;
+    border: 1px solid var(--color-mid-grey);
+    border-radius: var(--border-radius_sm);
+    height: 2.5rem;
+    padding: 7px;
+}
+
+.login-button {
+    background-color: black;
+    width: 100%;
+    border-radius: var(--border-radius_md);
+    margin-top: 1rem;
+    color: white;
+    padding: .5rem 1rem;
+    font-weight: 600;
+    font-family: var(--font-family-bold);
+}
+
+
+.login-form__divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.login-form__divider-line {
+    flex-grow: 1;
+    background-color: var(--color-grey);
+    height: 1.2px;
+}
+
+.login-form__divider-text {
+    padding: 0 10px;
+}
+
+.login-form__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 24px;
+}
+
+.social-button {
+    background-color: white;
+    height: 40px;
+    border-radius: var(--border-radius_md);
+    border: 1px solid var(--color-grey);
+    padding: 7px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.social-button:hover {
+    background-color: var(--color-accent-01);
+}
+
+.social-button__logo {
+    height: 100%;
+}
+
+.social-button__text {
+    font-weight: 600;
+}
+
+footer {
+    margin-top: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    text-decoration: underline;
+}
+
+nav a {
+    cursor: pointer;
+}
+
+.login-form__input--error {
+    border-color: var(--color-red) !important;
+}
+
+.login-form__error {
+    color: var(--color-red);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.login-button:disabled,
+.login-button.login-button--disabled {
+    background-color: var(--color-grey) !important;
+    color: #fff !important;
+    cursor: not-allowed !important;
+    opacity: 1 !important;
+}
+
+
+
